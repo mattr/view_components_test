@@ -1,0 +1,14 @@
+<%= render "shared/yielded" do %>
+  <%= tag.p "This content is not yielded correctly" %>
+<% end %>
+
+<%= render "shared/yielded" do %>
+  <% tag.p "But this content is, even though this is an eval block" %>
+<% end %>
+
+<%= render "shared/yielded" do %>
+  <p>The problem is notable when we:</p>
+  <ul>
+    <%= tag.li "Mix HTML and ERB" -%>
+  </ul>
+<% end %>
